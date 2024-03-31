@@ -21,4 +21,13 @@ public interface DishService {
     public PageResult pageQuery(DishPageQueryDTO dishPageQueryDTO);
 
     void deleteBatch(List<Long> ids);
+
+    /**
+     * 根据id查询菜品信息和对应的口味信息
+     * @param id
+     * @return
+     */
+    DishVO getByIdWithFlavor(Long id);
+
+    void updateWithFlavor(DishDTO dishDTO);
 }
